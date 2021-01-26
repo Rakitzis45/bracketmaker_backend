@@ -1,16 +1,16 @@
 user = User.create(email:"Mike@gmail.com", password:"mike")
 
-baseball_bracket = Bracket.create(name: "baseball", total_teams: 4, user_id: user.id)
+baseball_bracket = Bracket.new(name: "baseball", total_teams: 8, user_id: user.id)
+baseball_bracket.position1 = "Yankees"
+baseball_bracket.position2 = "Red Sox"
+baseball_bracket.position3 = "Mets"
+baseball_bracket.position4 = "Nationals"
+baseball_bracket.position5 = "Giants"
+baseball_bracket.position6 = "Dodgers"
+baseball_bracket.position7 = "Cubs"
+baseball_bracket.position8 = "White Sox"
+baseball_bracket.save
 
-yankees = Team.create(name: "Yankees", bracket_id: baseball_bracket.id)
-mets = Team.create(name: "Mets", bracket_id: baseball_bracket.id)
-redsox = Team.create(name: "Red Sox", bracket_id: baseball_bracket.id)
-dodgers = Team.create(name: "Dodgers", bracket_id: baseball_bracket.id)
-giants = Team.create(name: "Giants", bracket_id: baseball_bracket.id)
-rays = Team.create(name: "Rays", bracket_id: baseball_bracket.id)
-nationals = Team.create(name: "Nationals", bracket_id: baseball_bracket.id)
-bluejays = Team.create(name: "Blue Jays", bracket_id: baseball_bracket.id)
-cubs = Team.create(name: "Cubs", bracket_id: baseball_bracket.id)
 
 
 
