@@ -13,6 +13,11 @@ class BracketsController < ApplicationController
         bracket.update(bracket_params)
     end
 
+    def index
+        brackets = Bracket.all 
+        render json: brackets
+    end
+
     private 
     def bracket_params
         params.require(:bracket).permit(:id, :name, :position1, :position2, :position3, :position4, 
